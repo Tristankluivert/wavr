@@ -3,6 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:wavr/config/thema.dart';
+import 'package:wavr/features/dashboard/bindings/dashboard_binding.dart';
+import 'package:wavr/features/dashboard/view/dashboard.dart';
+import 'package:wavr/features/login/bindings/login_bindings.dart';
+import 'package:wavr/features/login/view/login_screen.dart';
 
 import 'package:wavr/features/splash_screen/view/splash_screen.dart';
 
@@ -36,9 +40,13 @@ class MyApp extends StatelessWidget {
           GetPage(name:'/register', page: ()=> RegisterInitialScreen(),
           transition: Transition.leftToRight, binding: RegisterBindings()
           ),
-          GetPage(name: '/splash_screen', page: ()=> SplashScreen(),
-          transition: Transition.leftToRight
-          )
+          GetPage(name: '/login_screen', page: ()=> LoginScreen(),
+          transition: Transition.leftToRight,
+            binding: LoginBindings()
+          ),
+         GetPage(name: '/dashboard', page: ()=> Dashboard(),
+         transition: Transition.leftToRight, binding: DashboardingBinding()
+         )
 
         ],
       ),

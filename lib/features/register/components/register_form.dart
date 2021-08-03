@@ -45,7 +45,7 @@ class _RegisterForm extends State<RegisterForm>{
                    Get.to(()=>RegisterFinalScreen());
                  },
                  style:  ElevatedButton.styleFrom(
-                   elevation: 15,
+                   elevation: 10,
                    shadowColor: wPrimaryColorDark,
                    primary: wPrimaryColorDark,
                    shape: RoundedRectangleBorder(
