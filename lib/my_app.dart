@@ -9,8 +9,11 @@ import 'package:wavr/features/login/bindings/login_bindings.dart';
 import 'package:wavr/features/login/view/login_screen.dart';
 
 import 'package:wavr/features/splash_screen/view/splash_screen.dart';
+import 'package:wavr/routes/app_pages.dart';
+import 'package:wavr/routes/app_routes.dart';
 
 
+import 'features/home/view/home_page.dart';
 import 'features/register/bindings/register_bindings.dart';
 import 'features/register/view/register_initial_screen.dart';
 
@@ -33,22 +36,10 @@ class MyApp extends StatelessWidget {
       builder : ()=> GetMaterialApp(
         title: 'Flutter Demo',
         theme: theme(),
-        home: SplashScreen() ,
         debugShowCheckedModeBanner: false,
-        //initialRoute: "/",
-        getPages: [
-          GetPage(name:'/register', page: ()=> RegisterInitialScreen(),
-          transition: Transition.leftToRight, binding: RegisterBindings()
-          ),
-          GetPage(name: '/login_screen', page: ()=> LoginScreen(),
-          transition: Transition.leftToRight,
-            binding: LoginBindings()
-          ),
-         GetPage(name: '/dashboard', page: ()=> Dashboard(),
-         transition: Transition.leftToRight, binding: DashboardingBinding()
-         )
-
-        ],
+        initialRoute: AppRoutes.HOME,
+        getPages: AppPages.list,
+        themeMode: ThemeMode.system,
       ),
       designSize: const Size(343, 749),
     );
