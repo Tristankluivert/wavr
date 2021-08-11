@@ -5,3 +5,5 @@ const wPrimaryColor = const Color(0xFFADEFD1);
 const wTextInputColor = const Color(0xFF8D8D8D);
 const wTextColor = const Color(0xFFFFFFFF);
 const wItemUnSelected = const Color(0xFFBDBDBD);
+const wChartBackgroundColor = const Color(0xFFADEFD1);
+const wChartTextColor = const Color(0xFF11432C);
