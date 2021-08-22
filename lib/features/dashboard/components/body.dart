@@ -131,7 +131,7 @@ class Body extends StatelessWidget{
                     right: 0,
                     left: 0,
                     child: Container(
-                      height: 160.h,
+                      height: 200.h,
                       width: 400.w,
                       child: BarChartSample2(),
                     ))

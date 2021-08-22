@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: theme(),
         debugShowCheckedModeBanner: false,
-        initialRoute: AppRoutes.HOME,
+        initialRoute: AppRoutes.SPLASH,
         getPages: AppPages.list,
         themeMode: ThemeMode.system,
       ),
